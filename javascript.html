@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title> Teste JavaScript</title>
-    <meta charset="utf-8"/>
-  </head>
-  <body>
-    <script>
+
+<head>
+  <title> Teste JavaScript</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <script>
     function copiarImagem() {
-        // Obtém as referências para a "imagem1" e o "container8"
-        const imagem1 = document.getElementById('imagem1');
-        const imagem-expandida = document.getElementById('container8');
+      // Obtém as referências para a "imagem1" e o "container8"
+      const imagem1 = document.getElementById('imagem1');
+      const imagem-expandida = document.getElementById('container8');
 
-        // Cria uma cópia da "imagem1"
-        const imagemCopia = imagem1.cloneNode(true);
+      // Cria uma cópia da "imagem1"
+      const imagemCopia = imagem1.cloneNode(true);
 
-        // Limpa o conteúdo atual do "container8"
-        imagem-expandida.innerHTML = '';
+      // Limpa o conteúdo atual do "container8"
+      imagem - expandida.innerHTML = '';
 
-        // Adiciona a cópia da imagem ao "container8"
-        imagem-expandida.appendChild(imagemCopia);
+      // Adiciona a cópia da imagem ao "container8"
+      imagem - expandida.appendChild(imagemCopia);
     }
 
     // Adiciona um evento de clique à "imagem1" que chama a função copiarImagem()
     document.getElementById('imagem1').addEventListener('click', copiarImagem);
-</script>
-    </script>
-  </body>
+  </script>
+  </script>
+</body>
+
 </html>

@@ -1,0 +1,568 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "FonteCinzel";
+  src: url(Cinzel_Decorative/CinzelDecorative-Regular.ttf);
+}
+@font-face {
+  font-family: "FonteCormorant";
+  src: url(Cormorant_Upright/CormorantUpright-Regular.ttf);
+}
+
+    body {
+      font-family: FonteCormorant;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("planodefundo.png") no-repeat center center fixed;
+      background-size: cover;
+
+    }
+
+    header {
+      background-color: #ffff;
+      color: #8D505C;
+      text-align: center;
+      padding-bottom: 20px;
+      position: fixed;
+      width: 100%;
+      height: 166px;
+      z-index: 2;
+    }
+
+    .amora {
+      width: 3%;
+      height: auto;
+      margin: 0 auto;
+    }
+@media (max-width: 415px) {
+    .amora {
+     width: 10%;
+    }
+}
+
+    .logotop {
+      padding-top: 20px;
+    }
+
+    .containercabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .linha-horizontal {
+      border-top: 1px solid #b7808b;
+      width: 45%;
+    }
+nav#menu1 ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+nav#menu1 li {
+  display: inline-block;
+  margin-right: 120px;
+  margin-left: 147px;
+  font-family: FonteCormorant;
+  font-size: 18px;
+}
+@media (max-width: 1083px) {
+  nav#menu1 li {
+    margin-right: 9px; 
+    margin-left: 11px; 
+    display: inline;
+  }
+}
+nav#menu1 li:hover {
+text-decoration: underline;
+}
+
+nav#menu1 a {
+  color: #8D505C;
+  text-decoration: none;
+}
+
+        .linha-horizontalfinal {
+      border-top: 3px solid #b7808b;
+      width: 100%;
+
+    }
+
+    .moraescrito {
+      font-family: FonteCinzel;
+      color: #8D505C;
+      font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: FonteCormorant;
+        color: #8D505C;
+      font-size: 28px;
+    }
+    h3 {
+      color: #606060;
+      font-size: 14px;
+    }
+
+    .container1 {
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      text-align: center;
+      align-items: flex-start;
+      justify-content: center;
+      height: 500px;
+    }
+@media (max-width: 963px) {
+  .container1 {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    width: auto;
+  }
+}
+
+    .esquerdaintro {
+      margin-top: 200px;
+      width: 30%;
+      flex-direction: column;
+      align-items: center;
+            padding-right: 80px;
+
+    }
+
+@media (max-width: 963px) {
+  .esquerdaintro {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    width: auto;
+          margin-top: 160px;
+  }
+}
+    .direitaintro {
+      margin-top: 230px;
+      width: 40%;
+    }
+
+@media (max-width: 963px) {
+  .direitaintro {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    width: auto;
+          margin-top: 18px;
+  }
+}
+
+ /* CONTAINER 2 */ 
+
+
+
+
+    .container2 {
+      margin: 0 auto;
+      text-align: center;
+      clear: both;
+        display: flex; /* Adicione display: flex para alinhar os filhos horizontalmente */
+  justify-content: space-between; /* Isso alinhará os filhos à esquerda e à direita */
+  padding: 0;
+  background-color: #FFFAFA;
+  align-items: flex-start;
+  width: 100%; /* Certifique-se de que o container2 use 100% da largura */
+}
+    
+    .esquerdabolos {
+      width: 50%;
+
+    }
+@media (max-width: 963px){
+  .esquerdabolos{
+    width: auto;
+  }
+}
+.container {
+  position: relative;
+  padding: 15px;
+  max-width: 600px;
+  margin: 40px;
+  z-index: 1;
+}
+.gallery-wrapper{
+  overflow-x: auto;
+}
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.current-item {
+  opacity: 1;
+}
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.gallery-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+    .direitabolos {
+      width: 50%;
+
+    }
+
+@media (max-width: 963px){
+  .direitabolos{
+    width: auto;
+  }
+}
+/*
+        .carrossel {
+            display: flex;
+            overflow: hidden;
+            width: 700px; 
+            height: auto;
+            margin-top: 50px;
+          margin-bottom: 50px;
+          align-items: center;
+          
+        }
+
+        .miniatura {
+            width: 100%;
+            height: 100px;
+            margin: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: flex;
+           scroll-behavior: smooth;
+        }
+
+        .miniatura img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .miniatura:hover {
+            transform: scale(1.1);
+        }
+
+          .seta-esquerda,
+          .seta-direita {
+             display: none;
+            }
+
+          @media (max-width: 768px) {
+  .seta-direita, 
+    .seta-esquerda {
+display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .miniatura {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+  }}*/
+
+.container-grande {
+    width: 380px; 
+    height: 380px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que a imagem saia do círculo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 20px;
+
+}
+@media (max-width: 1300px) {
+  .esquerdabolos {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1300px) {
+  .direitabolos {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 963px) {
+  .container2 {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+  }
+}
+ /* @media (max-width: 768px) {
+    .miniatura {
+      width: calc(100% / 2);
+    }
+  } */
+
+#imagem-grande {
+    max-width: 100%; /* A imagem se ajustará ao tamanho do container */
+    max-height: 100%; /* A imagem se ajustará ao tamanho do container */
+}
+
+
+
+
+.triangulo-circle img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 965px) {
+  .esquerdabolos{
+    margin: 0px;
+  }
+  .direitabolos{
+    padding: 0px;
+    margin: 0px;
+  }
+  .triangulo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .triangulo-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .triangulo-circle:nth-child(1) {
+    transform: translateX(-20px);
+  }
+
+  .triangulo-circle:nth-child(2) {
+    transform: translateY(-20px);
+  }
+
+  .triangulo-circle:nth-child(3) {
+    transform: translateX(20px);
+  }
+}
+.triangulo-container {
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.triangulo-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.circle1 {
+  width: 140px;
+  height: 140px;
+
+
+}
+
+.circle2 {
+  width: 190px;
+  height: 190px;
+  margin-top: 0px;
+  margin-left: 250px;
+
+
+  margin-bottom: 40px;
+}
+
+.circle3 {
+  width: 350px;
+  height: 350px;
+  margin-top: 0px;
+  margin-right: 20px;
+
+
+}  
+
+/* Estilos para ocultar o triangulo-circle em telas maiores que 965px */
+ @media (min-width: 966px) {
+  .triangulo-circle {
+    display: none;
+  }
+}
+
+/* Estilos para esconder o carrossel e o container grande */
+@media (max-width: 965px) {
+  .gallery {
+    display: none;
+  }
+
+  .container-grande {
+    display: none;
+  }
+}  
+
+    /* CONTAINER 3 */ 
+  
+    .container3 {
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      height: 450px;
+
+    } 
+@media (max-width: 963px) {
+  .container3 {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+  }
+}
+    .esquerdasobre { 
+           clear: both;
+      width: 30%;
+      padding-right: 80px;
+      margin-top: 50px;
+    
+
+    }
+@media (max-width: 963px) {
+  .esquerdasobre {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+  }
+}
+    .direitasobre {
+      width: 40%;
+
+    }
+@media (max-width: 963px) {
+  .direitasobre {
+height: auto;
+flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    padding: 20px;
+    width: auto;
+  }
+}
+    .container4 {
+           clear: both;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #FFFAFA;
+
+    }
+
+@media (max-width: 963px) {
+  .container4 {
+height: auto;
+flex-direction: column;
+  }
+}
+    .image {
+      text-align: center;
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .imagemeu {
+      display: inline-block;
+    }
+
+    .introducao {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .bolos {
+      text-align: center;
+            font-size: 20px;
+    }
+
+    .sobre {
+      text-align: center;
+            font-size: 20px;
+    }
+
+    .contato {
+      text-align: center;
+      font-family: ;
+            font-size: 20px;
+    }
+
+    footer#rodape {
+      clear: both;
+      text-align: center;
+    }
+
+
+
+
+
+

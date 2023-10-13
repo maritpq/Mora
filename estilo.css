@@ -181,16 +181,25 @@ nav#menu1 a {
   align-items: flex-start;
   width: 100%; /* Certifique-se de que o container2 use 100% da largura */
 }
+@media (max-width: 963px) {
+  .container2 {
+  display: flex;
+  flex-direction: column; /* Isso faz com que os itens sejam dispostos verticalmente em uma coluna */
+  align-items: center; /* Alinhar os itens horizontalmente ao centro */
+}
+}
     
     .esquerdabolos {
       width: 50%;
-
     }
-@media (max-width: 963px){
-  .esquerdabolos{
+
+@media (max-width:963px) {
+  .esquerdabolos {
     width: auto;
+    padding: 20px;
   }
 }
+
 .container {
   position: relative;
   padding: 15px;
@@ -198,6 +207,7 @@ nav#menu1 a {
   margin: 40px;
   z-index: 1;
 }
+
 .gallery-wrapper{
   overflow-x: auto;
 }
@@ -233,67 +243,9 @@ nav#menu1 a {
 
     }
 
-@media (max-width: 963px){
-  .direitabolos{
-    width: auto;
-  }
-}
-/*
-        .carrossel {
-            display: flex;
-            overflow: hidden;
-            width: 700px; 
-            height: auto;
-            margin-top: 50px;
-          margin-bottom: 50px;
-          align-items: center;
-          
-        }
-
-        .miniatura {
-            width: 100%;
-            height: 100px;
-            margin: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.3s;
-            display: flex;
-           scroll-behavior: smooth;
-        }
-
-        .miniatura img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .miniatura:hover {
-            transform: scale(1.1);
-        }
-
-          .seta-esquerda,
-          .seta-direita {
-             display: none;
-            }
-
-          @media (max-width: 768px) {
-  .seta-direita, 
-    .seta-esquerda {
-display: block;
-  }
-}
-
-@media (max-width: 768px) {
-  .miniatura {
-    width: 100px;
-    height: 100px;
-    margin-right: 5px;
-  }}*/
-
 .container-grande {
-    width: 380px; 
-    height: 380px; 
+    width: 50%; 
+    height: 50%; 
     background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 50%; 
     display: flex;
@@ -304,53 +256,12 @@ display: block;
     margin-top: 20px;
 
 }
-@media (max-width: 1300px) {
-  .esquerdabolos {
-height: auto;
-flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    padding: 20px;
-    width: auto;
-    margin-left: 40px;
-  }
-}
-@media (max-width: 1300px) {
-  .direitabolos {
-height: auto;
-flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    padding: 20px;
-    width: auto;
-    margin-right: 40px;
-  }
-}
-@media (max-width: 963px) {
-  .container2 {
-height: auto;
-flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    padding: 20px;
-    width: auto;
-  }
-}
- /* @media (max-width: 768px) {
-    .miniatura {
-      width: calc(100% / 2);
-    }
-  } */
+
 
 #imagem-grande {
     max-width: 100%; /* A imagem se ajustará ao tamanho do container */
     max-height: 100%; /* A imagem se ajustará ao tamanho do container */
 }
-
-
 
 
 .triangulo-circle img {
@@ -360,7 +271,7 @@ flex-direction: column;
   border-radius: 50%;
 }
 
-@media (max-width: 965px) {
+@media (max-width: 963) {
   .esquerdabolos{
     margin: 0px;
   }
@@ -411,8 +322,6 @@ flex-direction: column;
 .circle1 {
   width: 140px;
   height: 140px;
-
-
 }
 
 .circle2 {
@@ -420,8 +329,6 @@ flex-direction: column;
   height: 190px;
   margin-top: 0px;
   margin-left: 250px;
-
-
   margin-bottom: 40px;
 }
 
@@ -430,19 +337,17 @@ flex-direction: column;
   height: 350px;
   margin-top: 0px;
   margin-right: 20px;
-
-
 }  
 
-/* Estilos para ocultar o triangulo-circle em telas maiores que 965px */
- @media (min-width: 966px) {
+/* Estilos para ocultar o triangulo-circle em telas maiores que 963px */
+ @media (min-width: 963px) {
   .triangulo-circle {
     display: none;
   }
 }
 
 /* Estilos para esconder o carrossel e o container grande */
-@media (max-width: 965px) {
+@media (max-width: 963px) {
   .gallery {
     display: none;
   }

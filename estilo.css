@@ -167,9 +167,6 @@ nav#menu1 a {
 
  /* CONTAINER 2 */ 
 
-
-
-
     .container2 {
       margin: 0 auto;
       text-align: center;
@@ -255,7 +252,7 @@ nav#menu1 a {
     overflow: hidden; /* Evita que a imagem saia do círculo */
     margin: 0 auto; /* Centraliza horizontalmente */
     margin-top: 20px;
-
+    margin-bottom: 20px;
 }
 
 
@@ -271,6 +268,19 @@ nav#menu1 a {
   object-fit: cover;
   border-radius: 50%;
 }
+.menu-completo {
+   background-color: #DB9595;
+   padding: 6px;
+   border-radius: 5%;
+   text-decoration: none;
+   font-weight: bold;
+   color: white;
+   cursor: pointer;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ .menu-completo:hover {
+   background-color: #8D505C;
+ }
 
 @media (max-width: 963px) {
   .esquerdabolos{
@@ -280,6 +290,22 @@ nav#menu1 a {
     padding: 0px;
     margin: 0px;
   }
+  .bolos {
+    margin-bottom: 40px;
+  }
+  .menu-completo0 {
+     background-color: #DB9595;
+     padding: 6px;
+     border-radius: 5%;
+     text-decoration: none;
+     font-weight: bold;
+     color: white;
+     cursor: pointer;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   }
+   .menu-completo0:hover {
+     background-color: #8D505C;
+   }
   
   .triangulo-row {
     display: flex;
@@ -330,18 +356,27 @@ nav#menu1 a {
   .triangulo-circle {
     display: none;
   }
+   .menu-completo0 {
+     display: none;
+   }
 }
 
 /* Estilos para esconder o carrossel e o container grande */
 @media (max-width: 963px) {
-  .gallery {
-    display: none;
-  }
-
   .container-grande {
     display: none;
   }
+
+  .container {
+    display: none;
+  }
+
+  .menu-completo {
+    display: none;
+  }
 }  
+
+
 
     /* CONTAINER 3 */ 
   

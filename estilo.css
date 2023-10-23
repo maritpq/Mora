@@ -488,7 +488,8 @@ flex-direction: column;
 
     .container4 {
       margin: 0 auto;
-      padding: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
       background-color: #FFFAFA;
     }
 
@@ -506,25 +507,16 @@ input {
 
 fieldset {
   border: none;
+  padding: 0px;
+  width: auto;
 }
-botao-enviar {
-  background-color: #DB9595;
-  padding: 6px;
-   border-radius: 5%;
-   text-decoration: none;
-   font-weight: bold;
-   color: white;
-   cursor: pointer;
-   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
- .botao-enviar:hover {
-   background-color: #8D505C;
- }
 
 @media (max-width: 436px){
   input , textarea{
-    width: 250px;
+    width: 230px;
+  }
+  fieldset {
+    width: auto;
   }
   
 }

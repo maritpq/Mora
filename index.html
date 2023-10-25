@@ -142,53 +142,19 @@
         <fieldset id="formulario">
           <p>Nome: <br><input type="text" size="39" name="Nome" id="" size="20" placeholder="Seu nome" /></p>
           <p>Email: <br><input type="email" size="39" name="E-mail" id="" placeholder="exemplo@exemplo.com" /></p>
-          <p>WhatsApp: <br><input type="text" size="39" name="Whatsapp" id="" maxlength="16" placeholder="(00) 00000-0000" /></p>
+          <p>WhatsApp: <br><input type="text" size="39" name="Whatsapp" id="" maxlength="16"
+              placeholder="(00) 00000-0000" /></p>
           <p>Mensagem: <br> <textarea cols="45" rows="5" name="Mensagem"></textarea> </p>
         </fieldset>
         <button type="submit" id="botao-enviar">ENVIAR</button>
       </form>
 
-      <script>
-        async function enviarParaBaserow(event) {
-          event.preventDefault(); // Evitar a submissão do formulário
-
-          const form = event.target;
-          const nome = form.elements["Nome"].value;
-          const email = form.elements["E-mail"].value;
-          const whatsapp = form.elements["Whatsapp"].value;
-          const mensagem = form.elements["Mensagem"].value;
-
-          const data = {
-            Nome: nome,
-            Email: email,
-            Whatsapp: whatsapp,
-            Mensagem: mensagem,
-          };
-
-          const token = "XNCRzDF8A2sJr5kEF1sX2F0OWSV5Jygy"; 
-
-          try {
-            const response = await fetch("https://api.baserow.io/api/database/rows/table/205188/?user_field_names=true", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Token ${token}`, // Inclua o token no cabeçalho de autorização
-              },
-              body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-              console.log("Dados enviados com sucesso.");
-              // Redirecionar ou fazer algo após o envio bem-sucedido.
-            } else {
-              console.error("Erro ao enviar dados. Código de status:", response.status);
-            }
-          } catch (error) {
-            console.error("Erro ao enviar dados:", error);
-          }
-        }
-      </script>
-
+      <div id="successModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <p>Mensagem enviada com sucesso!</p>
+        </div>
+      </div>
     </div>
     <footer id="rodape">
       <p>Copyright &copy; 2023 - by Mariana Queiroz</p>

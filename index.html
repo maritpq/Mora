@@ -142,8 +142,8 @@
         <fieldset id="formulario">
           <p>Nome: <br><input type="text" size="39" name="Nome" id="" size="20" placeholder="Seu nome" /></p>
           <p>Email: <br><input type="email" size="39" name="E-mail" id="" placeholder="exemplo@exemplo.com" /></p>
-          <p>WhatsApp: <br><input type="text" size="39" name="Whatsapp" id="" maxlength="16"
-              placeholder="(00) 00000-0000" /></p>
+          <p>WhatsApp: <br><input type="text" size="39" oninput="formatarTelefone(this)" maxlength="15" name="Whatsapp"
+              id="" placeholder="(00) 00000-0000" /></p>
           <p>Mensagem: <br> <textarea cols="45" rows="5" name="Mensagem"></textarea> </p>
         </fieldset>
         <button type="submit" id="botao-enviar">ENVIAR</button>

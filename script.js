@@ -12,46 +12,58 @@ function fecharModal() {
   document.getElementById("successModal").style.display = "none";
 }
 
-  async function enviarParaBaserow(event) {
-    event.preventDefault(); // Evitar a submissão do formulário
+async function enviarParaBaserow(event) {
+  event.preventDefault(); // Evitar a submissão do formulário
 
-    const form = event.target;
-    const nome = form.elements["Nome"].value;
-    const email = form.elements["E-mail"].value;
-    const whatsapp = form.elements["Whatsapp"].value;
-    const mensagem = form.elements["Mensagem"].value;
+  const form = event.target;
+  const nome = form.elements["Nome"].value;
+  const email = form.elements["E-mail"].value;
+  const whatsapp = form.elements["Whatsapp"].value;
+  const mensagem = form.elements["Mensagem"].value;
 
-    const data = {
-      Nome: nome,
-      Email: email,
-      Whatsapp: whatsapp,
-      Mensagem: mensagem,
-    };
+  const data = {
+    Nome: nome,
+    Email: email,
+    Whatsapp: whatsapp,
+    Mensagem: mensagem,
+  };
 
-    const token = "XNCRzDF8A2sJr5kEF1sX2F0OWSV5Jygy";
-    try {
-      const response = await fetch("https://api.baserow.io/api/database/rows/table/209729/?user_field_names=true", {
+  const token = "XNCRzDF8A2sJr5kEF1sX2F0OWSV5Jygy";
+  try {
+    const response = await fetch("https://api.baserow.io/api/database/rows/table/209729/?user_field_names=true", {
 
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Token XNCRzDF8A2sJr5kEF1sX2F0OWSV5Jygy`,
-        },
-        body: JSON.stringify(data),
-      });
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Token XNCRzDF8A2sJr5kEF1sX2F0OWSV5Jygy`,
+      },
+      body: JSON.stringify(data),
+    });
 
-      if (response.ok) {
-        console.log("Dados enviados com sucesso.");
-        // Redirecionar ou fazer algo após o envio bem-sucedido.
+    if (response.ok) {
+      console.log("Dados enviados com sucesso.");
+      // Redirecionar ou fazer algo após o envio bem-sucedido.
 
-        abrirModal(); // Exibir o pop-up de sucesso
-        setTimeout(function () {
-          window.location.reload();
-        }, 3000);
-      } else {
-        console.error("Erro ao enviar dados. Código de status:", response.status);
-      }
-    } catch (error) {
-      console.error("Erro ao enviar dados:", error);
+      abrirModal(); // Exibir o pop-up de sucesso
+      setTimeout(function() {
+        window.location.reload();
+      }, 3000);
+    } else {
+      console.error("Erro ao enviar dados. Código de status:", response.status);
     }
+  } catch (error) {
+    console.error("Erro ao enviar dados:", error);
   }
+}
+function formatarTelefone(input) {
+  let phoneNumber = input.value.replace(/\D/g, '');
+
+  if (phoneNumber.length >= 2 && phoneNumber.length <= 7) {
+    phoneNumber = `(${phoneNumber.substring(0, 2)}) ${phoneNumber.substring(2)}`;
+  }
+  else if (phoneNumber.length > 7) {
+    phoneNumber = `(${phoneNumber.substring(0, 2)}) ${phoneNumber.substring(2, 7)}-${phoneNumber.substring(7)}`;
+  }
+
+  input.value = phoneNumber;
+}

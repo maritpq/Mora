@@ -19,7 +19,6 @@
     }
 
     header {
-      max-width: 1400px;
       background-color: #ffff;
       color: #8D505C;
       text-align: center;
@@ -27,6 +26,8 @@
       width: 100%;
       height: auto;
       z-index: 2;
+      left: 0;
+      right: 0;
     }
 
     .amora {
